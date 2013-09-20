@@ -13,7 +13,7 @@ $(document).ready(function(){
 	});
 
 	if(QPag > 0){
-		
+		//Uma alteração tosca :D
 		$('body').append('<div class="PageMotion-Menu"></div>');
 		
 		for(j=0;j<=QPag;j++){
