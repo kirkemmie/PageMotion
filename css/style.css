@@ -1,0 +1,29 @@
+body{
+	background:#F1F1F1;
+	margin:0;
+}
+
+a{
+	text-decoration:none;
+}
+
+br{
+	clear:both;
+}
+
+.PageMotion{
+	width:100%;
+	height:100%;
+	position:absolute;
+	display:none;
+}
+
+.PageMotion-Menu{
+}
+
+.Text{
+	color:#666;
+	margin:0px auto;
+	margin-top:10%;
+	text-align:center;
+}
