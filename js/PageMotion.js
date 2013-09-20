@@ -1,5 +1,4 @@
-$(document).ready(function(){
-	
+function PageMotion(){
 	var QPag;
 	var Title = new Array();
 	
@@ -13,8 +12,14 @@ $(document).ready(function(){
 	});
 
 	if(QPag > 0){
-		//Uma alteração tosca :D
-		$('body').append('<div class="PageMotion-Menu"></div>');
+		
+		if(PageMotionProperties.bottom == true){
+			$('body').append('<div class="PageMotion-Menu PageMotion-bottom"></div>');
+		}else{
+			$('body').append('<div class="PageMotion-Menu PageMotion-top"></div>');
+		}
+		
+		
 		
 		for(j=0;j<=QPag;j++){
 			
@@ -41,10 +46,22 @@ $(document).ready(function(){
 			$(this).addClass('Hover');
 			
 			$('.PageMotion').hide();
-			$('#PageMotion'+q).fadeIn();
+			$('#PageMotion'+q).fadeIn(PageMotionProperties.speed);
 			
 		});
 		
 	});
+}
+
+$(document).ready(function(){
+	
+	PageMotionProperties = {
+	
+		bottom:true,
+		speed:5000
+		
+	}
+	
+	PageMotion();
 	
 });
